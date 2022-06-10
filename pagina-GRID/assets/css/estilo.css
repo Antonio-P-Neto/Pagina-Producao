@@ -1,0 +1,65 @@
+html{
+    font-size: 62.5%;
+}
+
+body{
+    display: grid;
+    grid-template-areas: "header header header header"
+                         "hero hero hero hero"
+                         "about about about about"
+                         "service service service service"
+                         "projects projects projects projects"
+                         "rodape rodape rodape rodape";
+    grid-template-columns: repeat(4, 1fr);
+    font-size: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+.header{
+    grid-area: header;
+    background-color: rgb(0, 106, 255);
+}
+
+.header .cabecalho{
+    display: flex;
+    padding: 20px 40px;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 75px;
+}
+
+.header .cabecalho h1{
+    font-size: 3rem;
+    font-weight: 700;
+    transition: 0.2s;
+}
+
+.header .cabecalho a:hover h1{
+    color: coral;
+
+}
+
+.hero{
+    grid-area: hero;
+    background-color: rgb(81, 38, 252);
+}
+
+.about{
+    grid-area: about;
+    background-color: rgb(83, 49, 218);
+}
+ .service{
+    grid-area: service;
+    background-color: rgb(88, 13, 200);
+}
+
+.projects{
+    grid-area: projects;
+    background-color: rgb(111, 26, 209);
+}
+
+.rodape{
+    grid-area: rodape;
+    background-color: rgb(142, 2, 202);
+}
