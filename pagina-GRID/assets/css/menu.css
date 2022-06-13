@@ -7,6 +7,8 @@
     padding: 10px 30px;
     border-radius: 50px;
     transition: 0.3s;
+    font-weight: 400;
+
 }
 
 .header .cabecalho ul :hover a{
@@ -75,8 +77,10 @@
 }
 
 @media (max-width: 900px){
+
     .header .menu{
         display: block;
+        
     }
 
     .header .navegador ul{
@@ -90,7 +94,7 @@
     .header nav{
         position: absolute;
         top: 8px;
-        right: 0;
+        right: 20px;
         z-index: 1;
     }
 
@@ -104,5 +108,7 @@
         text-align: center;
         padding: 20px;
         display: block;
+        font-weight: 400;
     }
+
 }

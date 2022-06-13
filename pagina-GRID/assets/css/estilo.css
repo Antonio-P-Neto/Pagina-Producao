@@ -16,9 +16,10 @@ body{
     font-weight: 400;
 }
 
+
+/*parte supeior do site*/
 .header{
     grid-area: header;
-    background-color: rgb(0, 106, 255);
 }
 
 .header .cabecalho{
@@ -39,15 +40,98 @@ body{
     color: coral;
 
 }
-
+/*estio e animação section"hero"*/
 .hero{
     grid-area: hero;
-    background-color: rgb(81, 38, 252);
+    height: 89vh;
+    background: url(../img/lemons.jpg)center center no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.hero h2{
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.hero::after{
+    content: url(../img/seta_preta.png);
+    position: absolute;
+    height: 35px;
+    bottom: 30px;
+    animation: alternar 0.6s infinite alternate
+    ease-in-out;
+}
+
+@-webkit-keyframes alternar{
+    0% { -webkit-transform: translateY(0); opacity: 0.4;}
+    100%{ -webkit-transform: translateY(1em); opacity:0.9;}
+}
+
+@media(max-widhth:420px){
+    .hero{
+        height: 60vh;
+    }
+
+    .hero{
+        font-size: 2.5rem;
+    }
 }
 
 .about{
     grid-area: about;
-    background-color: rgb(83, 49, 218);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    background-color: #fff;
+    max-width: var(--max-widh-size);
+    margin: 0 auto;
+}
+
+.about .item{
+    padding: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.about .item h3{
+    font-weight: 700;
+    font-size: 4rem;
+}
+
+.about .item p{
+    font-size: 1.8rem;
+    margin: 30px 0px;
+}
+
+.about .item .btn-saiba-mais{
+    font-size: 1.6rem;    
+    align-self: flex-start;
+}
+
+.about .item .btn-saiba-mais:hover{
+    font-weight: 600;
+}
+
+.about .image{
+    height: 100%;
+    left: 100%;
+}
+
+.about .image.right{
+    background: url(../img/bridge.jpg) center center no-repeat;
+    background-size: cover;
+
+}
+
+.about .image.left{
+    background: url(../img/sky.jpg) center center no-repeat;
+    background-size: cover;
 }
  .service{
     grid-area: service;
