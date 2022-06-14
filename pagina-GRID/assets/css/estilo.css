@@ -71,7 +71,7 @@ body{
     100%{ -webkit-transform: translateY(1em); opacity:0.9;}
 }
 
-@media(max-widhth:420px){
+@media(max-width:768px){
     .hero{
         height: 60vh;
     }
@@ -133,17 +133,117 @@ body{
     background: url(../img/sky.jpg) center center no-repeat;
     background-size: cover;
 }
+
+@media(max-width:768px){
+    .about .item{
+        text-align: center;
+    }
+
+    .about{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+    }
+}
  .service{
     grid-area: service;
-    background-color: rgb(88, 13, 200);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
+
+.service .service-info{
+    padding: 70px 20px;
+    text-align: center;
+}
+ .service .service-info img{
+    width: 250px;
+    margin-bottom: 30px;
+ }
+
+ .service .service-info .inform h3{
+    font-size: 1.8rem;
+    font-weight: 700;
+ }
+
+ .service .service-info .inform p{
+    font-size: 2rem;
+    font-weight: 400;
+    margin: 20px auto 0;
+    line-height: 25px;
+ }
+
+ .service .service-info:nth-child(1){
+    background-color: lightskyblue;
+ }
+
+ .service .service-info:nth-child(2){
+    background-color: #6e5dcf;
+ }
+
+ @media(max-width:768px){
+    .service{
+        display: inline;
+    }
+
+ }
 
 .projects{
     grid-area: projects;
-    background-color: rgb(111, 26, 209);
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.projects img{
+    height: 100%;
+    transition: 0.3s;
+}
+
+.projects a:hover img{
+    opacity: 0.8;
+}
+
+@media(max-width:768px){
+    .projects{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width:425px){
+    .projects{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
 }
 
 .rodape{
     grid-area: rodape;
-    background-color: rgb(142, 2, 202);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 100px 0;
+    background-color: lightgreen;
+}
+
+.rodape h4{
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.rodape nav ul{
+    display: flex;
+    justify-content: center;
+    max-width: 320px;
+    margin: 0 auto;
+}
+
+.rodape nav ul li a{
+    font-size: 2rem;
+    font-weight: 500;
+    margin: 20px;
+    transition: 0.2s;
+}
+
+.rodape nav ul li a:hover{
+    font-weight: 600;
+    color: #fff;
 }
